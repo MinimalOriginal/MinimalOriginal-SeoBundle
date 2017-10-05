@@ -1,9 +1,9 @@
 {
-    "name": "minimaloriginal/menu-bundle",
-    "description" : "The menu bundle for Minimal",
+    "name": "minimaloriginal/seo-bundle",
+    "description" : "The seo bundle for Minimal",
     "type" : "symfony-bundle",
     "keywords" : [
-        "menu bundle"
+        "seo bundle"
     ],
     "license" : [
         "MIT"
@@ -15,6 +15,6 @@
         "minimaloriginal/core-bundle": "dev-master"
     },
     "autoload": {
-        "psr-4": { "MinimalOriginal\\MenuBundle\\": "src/" }
+        "psr-4": { "MinimalOriginal\\SeoBundle\\": "src/" }
     }
 }
