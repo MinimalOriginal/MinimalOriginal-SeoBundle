@@ -1,6 +1,7 @@
 services:
   minimal_manager.module.seo:
       class: MinimalOriginal\SeoBundle\MinimalModule
+      arguments: ['@doctrine.orm.entity_manager']
       tags: [minimal_manager.module]
 
 # SEO

@@ -2,34 +2,22 @@
 
 namespace MinimalOriginal\SeoBundle;
 
-use MinimalOriginal\CoreBundle\Modules\ModuleInterface;
+use MinimalOriginal\CoreBundle\Modules\AbstractManageableModule;
 
 use MinimalOriginal\SeoBundle\Form\SeoType;
 use MinimalOriginal\SeoBundle\Entity\Seo;
 
-class MinimalModule implements ModuleInterface{
-
-  private $moduleList;
+class MinimalModule extends AbstractManageableModule{
 
   /**
    * {@inheritdoc}
    */
-  public function getName(){
-    return 'seo';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getTitle(){
-    return "SEO";
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getDescription(){
-    return "Créez ou modifiez les seo de votre site.";
+  public function init(){
+    $this->informations->set('name', 'seo');
+    $this->informations->set('title', 'SEO');
+    $this->informations->set('description', "Créez ou modifiez les seo de votre site.");
+    $this->informations->set('icon', "ion-ios-world-outline");
+    return $this;
   }
 
   /**
